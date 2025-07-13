@@ -1,0 +1,5 @@
+2025-07-10 18:50:12.156 | INFO     | __main__:main:16 - 🚀 Starting data processing...
+2025-07-10 18:50:12.570 | INFO     | __main__:main:28 - 🗃️ Loaded and merged raw datasets.
+2025-07-10 18:50:13.640 | INFO     | __main__:main:51 - Cleaned and structured data.
+2025-07-10 18:50:13.744 | INFO     | __main__:main:66 - Inflation-adjusted prices calculated.
+2025-07-10 18:50:15.743 | SUCCESS  | __main__:main:70 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv
