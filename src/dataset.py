@@ -33,6 +33,7 @@ def main(
     df['year'] = df['date'].dt.year
     df = df.rename(columns={'lease_commence_date': 'lease_year'})
     df['years_leased'] = df['year'] - df['lease_year']
+    df['town'] = df['town'].replace({'KALLANG/WHAMPOA': 'KALLANG'})
 
     # Set entries to proper case
     for col in ['town', 'street_name', 'flat_model', 'flat_type']:
