@@ -39,3 +39,9 @@
 2025-07-14 23:57:32.669 | INFO     | __main__:main:73 - Inflation-adjusted prices calculated.
 2025-07-14 23:57:35.997 | INFO     | __main__:main:122 - Added planning area data.
 2025-07-14 23:57:38.288 | SUCCESS  | __main__:main:126 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv
+2025-07-15 00:32:36.787 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-15 00:32:37.178 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-15 00:32:38.522 | INFO     | __main__:main:55 - Cleaned and structured data.
+2025-07-15 00:32:38.637 | INFO     | __main__:main:73 - Inflation-adjusted prices calculated.
+2025-07-15 00:32:41.933 | INFO     | __main__:main:119 - Added planning area data.
+2025-07-15 00:32:44.198 | SUCCESS  | __main__:main:123 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv

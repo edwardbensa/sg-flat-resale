@@ -41,6 +41,7 @@ def main(
     for col in ['town', 'street_name', 'flat_model', 'flat_type']:
         df[col] = df[col].str.title()
     df['street_name'] = df['street_name'].replace({"'S":"'s"}, regex=True)
+    df['planning_area'] = df['town'] # Add planning_area column
 
     # Storey range handling
     df[['start_floor', 'end_floor']] = df['storey_range'].str.extract(r'(\d+)\s+TO\s+(\d+)').astype(int)
@@ -48,9 +49,8 @@ def main(
 
     # Reorder columns
     df = df[[
-        'date', 'year', 'month', 'town', 'street_name', 'block', 'flat_type', 'flat_model',
-        'storey_count', 'start_floor', 'floor_area_sqm', 'lease_year',
-        'years_leased', 'resale_price'
+        'date', 'year', 'month', 'planning_area', 'town', 'street_name', 'block', 'flat_type', 'flat_model',
+        'storey_count', 'start_floor', 'floor_area_sqm', 'lease_year', 'years_leased', 'resale_price'
     ]]
     logger.info("Cleaned and structured data.")
 
@@ -73,9 +73,6 @@ def main(
     logger.info("Inflation-adjusted prices calculated.")
 
     # Geospatial
-    # Add planning_area column
-    df['planning_area'] = df['town']
-
     # Modify planning_area entries for town == Central Area and town == Kallang/Whampoa
     town_mappings = {
         "Central Area": {
