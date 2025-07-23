@@ -1,7 +1,6 @@
 from pathlib import Path
 import typer
 import pandas as pd
-import geopandas as gpd
 
 from src.config import PROCESSED_DATA_DIR, RAW_DATA_DIR, EXTERNAL_DATA_DIR
 from src.utils.logging import setup_logger
@@ -11,7 +10,8 @@ logger = setup_logger()
 
 @app.command()
 def main(
-    output_path: Path = PROCESSED_DATA_DIR / 'ResaleFlatPrices-Processed.csv',
+    processed_data: Path = PROCESSED_DATA_DIR / 'ResaleFlatPrices-Processed.csv',
+    location_data: Path = PROCESSED_DATA_DIR / 'ResaleFlatPrices-Locations.csv',
 ):
     '''Imports and cleans data'''
     logger.info("Starting data processing...")
@@ -41,7 +41,18 @@ def main(
     for col in ['town', 'street_name', 'flat_model', 'flat_type']:
         df[col] = df[col].str.title()
     df['street_name'] = df['street_name'].replace({"'S":"'s"}, regex=True)
-    df['planning_area'] = df['town'] # Add planning_area column
+
+    # Add planning_area and region columns
+    df['planning_area'] = df['town']
+    region_mapping = {
+        'Bishan': 'Central', 'Bukit Merah': 'Central', 'Bukit Timah': 'Central', 'Central Area': 'Central',
+        'Geylang': 'Central', 'Kallang/Whampoa': 'Central', 'Marine Parade': 'Central', 'Queenstown': 'Central',
+        'Toa Payoh': 'Central', 'Bedok': 'East', 'Pasir Ris': 'East', 'Tampines': 'East', 'Lim Chu Kang': 'North',
+        'Sembawang': 'North', 'Woodlands': 'North', 'Yishun': 'North', 'Ang Mo Kio': 'North-East', 'Hougang': 'North-East',
+        'Punggol': 'North-East', 'Sengkang': 'North-East', 'Serangoon': 'North-East', 'Bukit Batok': 'West',
+        'Bukit Panjang': 'West', 'Choa Chu Kang': 'West', 'Clementi': 'West', 'Jurong East': 'West', 'Jurong West': 'West',
+    }
+    df['region'] = df['town'].map(region_mapping)
 
     # Storey range handling
     df[['start_floor', 'end_floor']] = df['storey_range'].str.extract(r'(\d+)\s+TO\s+(\d+)').astype(int)
@@ -49,7 +60,7 @@ def main(
 
     # Reorder columns
     df = df[[
-        'date', 'year', 'month', 'planning_area', 'town', 'street_name', 'block', 'flat_type', 'flat_model',
+        'date', 'year', 'month', 'region', 'planning_area', 'town', 'street_name', 'block', 'flat_type', 'flat_model',
         'storey_count', 'start_floor', 'floor_area_sqm', 'lease_year', 'years_leased', 'resale_price'
     ]]
     logger.info("Cleaned and structured data.")
@@ -118,9 +129,16 @@ def main(
 
     logger.info("Added planning area data.")
 
-    # Export
-    df.to_csv(output_path, index=False)
-    logger.success(f"Dataset saved to: {output_path}")
+    # Create dataframe for location data and drop planning_area, street_name and block from main df
+    location_df = df[['region', 'town', 'planning_area', 'street_name', 'block', 'start_floor']].copy()
+    df = df.drop(columns=['planning_area', 'street_name', 'block'])
+
+    logger.info("Created location dataframe.")
+
+    # Export dataframes
+    df.to_csv(processed_data, index=False)
+    location_df.to_csv(location_data, index=False)
+    logger.success(f"Dataset saved to: {processed_data} and {location_data}")
 
 if __name__ == "__main__":
     app()

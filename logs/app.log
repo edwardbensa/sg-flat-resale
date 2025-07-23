@@ -1,0 +1,65 @@
+2025-07-15 18:20:41.579 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-15 18:20:42.011 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-15 18:20:43.375 | INFO     | __main__:main:50 - Cleaned data.
+2025-07-15 18:20:43.521 | INFO     | __main__:main:68 - Inflation-adjusted prices calculated.
+2025-07-15 18:20:47.195 | INFO     | __main__:main:119 - Added planning area and region data.
+2025-07-15 18:23:32.294 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-15 18:23:32.733 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-15 18:23:34.125 | INFO     | __main__:main:50 - Cleaned data.
+2025-07-15 18:23:34.275 | INFO     | __main__:main:68 - Inflation-adjusted prices calculated.
+2025-07-15 18:23:37.921 | INFO     | __main__:main:119 - Added planning area and region data.
+2025-07-15 18:24:51.448 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-15 18:24:51.889 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-15 18:24:53.289 | INFO     | __main__:main:50 - Cleaned data.
+2025-07-15 18:24:53.447 | INFO     | __main__:main:68 - Inflation-adjusted prices calculated.
+2025-07-15 18:24:57.102 | INFO     | __main__:main:120 - Added planning area and region data.
+2025-07-15 18:25:27.022 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-15 18:25:27.443 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-15 18:25:28.902 | INFO     | __main__:main:55 - Cleaned and structured data.
+2025-07-15 18:25:29.024 | INFO     | __main__:main:73 - Inflation-adjusted prices calculated.
+2025-07-15 18:25:32.514 | INFO     | __main__:main:119 - Added planning area data.
+2025-07-15 18:25:34.922 | SUCCESS  | __main__:main:123 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv
+2025-07-15 18:41:59.120 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-15 18:41:59.554 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-15 18:42:01.019 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-15 18:42:01.148 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-15 18:42:04.571 | INFO     | __main__:main:130 - Added planning area data.
+2025-07-15 18:42:07.056 | SUCCESS  | __main__:main:134 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv
+2025-07-16 07:55:19.120 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-16 07:55:19.525 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-16 07:55:20.960 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-16 07:55:21.083 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-16 07:56:04.103 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-16 07:56:04.549 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-16 07:56:06.036 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-16 07:56:06.154 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-16 07:56:09.576 | INFO     | __main__:main:133 - Added planning area data.
+2025-07-16 07:56:11.781 | SUCCESS  | __main__:main:137 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv
+2025-07-22 11:25:08.047 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-22 11:25:08.429 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-22 11:25:09.707 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-22 11:25:09.836 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-22 11:27:11.829 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-22 11:27:12.203 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-22 11:27:13.520 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-22 11:27:13.636 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-22 11:37:18.971 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-22 11:37:19.386 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-22 11:37:20.756 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-22 11:37:20.885 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-22 11:37:24.124 | INFO     | __main__:main:136 - Added planning area data.
+2025-07-22 11:37:26.973 | SUCCESS  | __main__:main:141 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv and /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Locations.csv
+2025-07-22 11:41:03.358 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-22 11:41:03.720 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-22 11:41:05.036 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-22 11:41:05.152 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-22 11:41:08.318 | INFO     | __main__:main:130 - Added planning area data.
+2025-07-22 11:41:08.358 | INFO     | __main__:main:136 - Created location dataframe.
+2025-07-22 11:41:11.096 | SUCCESS  | __main__:main:141 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv and /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Locations.csv
+2025-07-22 11:44:16.428 | INFO     | __main__:main:17 - Starting data processing...
+2025-07-22 11:44:16.809 | INFO     | __main__:main:29 - Loaded and merged raw datasets.
+2025-07-22 11:44:18.170 | INFO     | __main__:main:66 - Cleaned and structured data.
+2025-07-22 11:44:18.293 | INFO     | __main__:main:84 - Inflation-adjusted prices calculated.
+2025-07-22 11:44:21.454 | INFO     | __main__:main:130 - Added planning area data.
+2025-07-22 11:44:21.494 | INFO     | __main__:main:136 - Created location dataframe.
+2025-07-22 11:44:24.021 | SUCCESS  | __main__:main:141 - Dataset saved to: /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Processed.csv and /Users/Edward/Documents/GitHub/sg-flat-resale/data/processed/ResaleFlatPrices-Locations.csv
