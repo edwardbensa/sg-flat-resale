@@ -243,4 +243,4 @@ def catplots(df, x_vars, group_by, title, agg_operation = 'count'):
         ]
     )
     
-    fig.show()
+    return fig

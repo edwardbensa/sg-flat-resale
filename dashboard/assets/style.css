@@ -1,0 +1,13 @@
+/* assets/style.css */
+body {
+  margin: 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #0074D9;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
